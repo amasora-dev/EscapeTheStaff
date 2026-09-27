@@ -1,0 +1,9 @@
+// Adapter unit test, not a browser test. Missing assets intentionally simulated.
+const vm=require('node:vm'),fs=require('node:fs'),assert=require('node:assert/strict');
+const handlers={},elements={};let frame;
+const context=new Proxy({},{get:()=>()=>{},set:()=>true});
+function el(id){return elements[id]??={style:{},classList:{add(){},remove(){},toggle(){}},setAttribute(){},addEventListener(type,fn){this[type]=fn;},getContext:()=>context,getBoundingClientRect:()=>({left:0,top:0,width:96,height:96}),setPointerCapture(){},textContent:'',innerHTML:''};}
+const sandbox={EscapeGame:require('../js/engine.js'),document:{hidden:false,getElementById:el,addEventListener(){}},window:{addEventListener:(t,f)=>handlers[t]=f},Image:class{set src(v){this.onerror();}},Audio:class{addEventListener(){}play(){return Promise.reject(new Error('missing'));}},performance:{now:()=>0},requestAnimationFrame:fn=>frame=fn,console};vm.createContext(sandbox);vm.runInContext(fs.readFileSync(require.resolve('../js/game.js'),'utf8'),sandbox);
+assert(el('overlay').innerHTML.includes('接客から'));el('action').onclick();frame(16);const y=vm.runInContext('game.player.y',sandbox);handlers.keydown({code:'ArrowUp',preventDefault(){}});frame(116);assert(vm.runInContext('game.player.y',sandbox)<y);handlers.keyup({code:'ArrowUp'});
+el('stick').pointerdown({pointerId:1,clientX:90,clientY:48});const x=vm.runInContext('game.player.x',sandbox);frame(216);assert(vm.runInContext('game.player.x',sandbox)>x);el('stick').pointercancel({pointerId:1});assert.equal(vm.runInContext('stick.x',sandbox),0);
+assert.equal(vm.runInContext('audioOn',sandbox),false);el('sound').onclick();assert.equal(vm.runInContext('audioOn',sandbox),true);vm.runInContext("sound('get')",sandbox);frame(316);assert.equal(el('time').textContent,45);console.log('PASS canvas fallback, keyboard, pointer input, cancellation, missing audio, sound opt-in and HUD (DOM stubs)');

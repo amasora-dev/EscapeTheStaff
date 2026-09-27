@@ -1,0 +1,16 @@
+# 結果画面イラストの生成記録
+
+内蔵 image_gen を使用。生成されたPNGをそのままプロジェクトへコピーしています。
+
+## 接客失敗 — result-failure.png
+
+Use case: illustration-story. Asset type: landscape 3:2 game result illustration for Japanese comedy stealth shopping game. Create one hilarious gag manga panel. A chibi young adult shopper with short dark charcoal hair, teal sweatshirt and dark trousers has frozen in exaggerated existential despair, blank white round eyes, vertical blue gloom lines, enormous sweat drops, soul comically leaving mouth. Beside them an extremely kind smiling clothing-store employee with brown bob hair and ochre beige apron cheerfully offers a folded shirt, sparkle accents. Friendly employee, absolutely no malice. Clothing racks faint in background. Thick expressive dark ink contours, hand drawn Japanese gag manga, screentone dots, warm ivory paper, muted teal and ochre, coral impact accents. Close expressive faces, strong readable silhouettes at small mobile size, dynamic radial shock lines. One single panel, no text, no lettering, no logos, no watermark, no panel subdivisions. Entire characters and effects safely inside edges.
+
+## 成功 — result-success.png
+
+Use case: illustration-story. Asset type: landscape 3:2 game success result illustration for Japanese comedy stealth shopping game. One hilarious gag manga panel. Chibi young adult shopper with short tousled dark charcoal hair, teal sweatshirt, dark trousers, sneakers, enormous head and tiny body triumphantly bursts out of a clothing shop carrying two ivory and ochre paper shopping bags containing neatly purchased clothes. Absurdly heroic victorious pose, one knee raised, clenched fist, enormous smug delighted grin, a little lingering nervous sweat, tears of relief, sparkles and exaggerated radial victory lines. Behind, tiny kind female employee with brown bob hair and ochre beige apron smiles and waves goodbye from store doorway, absolutely no malice. Thick expressive dark ink contours, hand drawn Japanese gag manga, screentone dots, warm ivory paper texture, muted teal and ochre, coral accents. Strong readable silhouettes at mobile size. Main face and bags dominant, all important elements within frame. No text, no lettering, no logos, no watermark, no panel subdivisions.
+
+## 時間切れ — result-timeout.png
+
+Use case: illustration-story. Asset type: landscape 3:2 game timeout result illustration for Japanese comedy stealth shopping game. One hilarious gag manga panel. Chibi young adult shopper with short tousled dark charcoal hair, teal sweatshirt, dark trousers, sneakers, enormous head and tiny body slumped on both knees in exaggerated despair in front of a closed clothing shop shutter. BOTH hands held out completely empty, no shopping bags, no purchased clothes. Huge tears spout sideways from blank eyes, tiny ghost soul floats above head. A large simple analog clock above the shutter emphasizes running out of time. Dramatic vertical gloom lines. Thick expressive dark ink contours, hand drawn Japanese gag manga, screentone dots, warm ivory paper texture, muted teal and ochre, coral accents. Strong readable silhouette at mobile size. Funny everyday disappointment, not tragedy. Entire figure safely inside frame. No text, no lettering, no logos, no watermark, no panel subdivisions.
+
